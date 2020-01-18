@@ -1,0 +1,11 @@
+<h1>All apps in workspace</h1>
+<% @apps.each do |app|%>
+<div class="card">
+  <img src=<%= image_url("application_image.png") %> alt="Application Image" style="width:100%">
+  <div class="container">
+    <h4><%= app["config"]["name"] %></h4>
+    <p>Current version <%= app["current_revision"]%> </p>
+    <p class="description">desc: <%= app["config"]["description"] %></p>
+  </div>
+</div>
+<% end %>

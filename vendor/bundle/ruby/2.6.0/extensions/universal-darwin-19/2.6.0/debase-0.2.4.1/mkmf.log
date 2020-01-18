@@ -1,0 +1,209 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"xcrun clang -o conftest -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/backward -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_ATOMIC_BUILTINS conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib -L. -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib   -arch x86_64   -lruby.2.6   "
+ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"xcrun clang -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/backward -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_ATOMIC_BUILTINS  -arch x86_64  -c conftest.c"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"xcrun clang -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/backward -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby-2.6.3-p62  -g -Os -pipe -DHAVE_GCC_ATOMIC_BUILTINS  -arch x86_64  -c conftest.c"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"xcrun clang -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/backward -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0 -I. -I/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0  -g -Os -pipe -DHAVE_GCC_ATOMIC_BUILTINS  -arch x86_64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- no
+
+"xcrun clang -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin19 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/backward -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0 -I. -I/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0  -g -Os -pipe -DHAVE_GCC_ATOMIC_BUILTINS  -arch x86_64  -c conftest.c"
+In file included from conftest.c:3:
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:27:12: error: invalid application of 'sizeof' to an incomplete type 'struct rb_call_info_kw_arg'
+    return sizeof(struct rb_call_info_kw_arg) + sizeof(VALUE) * (keyword_len - 1);
+           ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:27:26: note: forward declaration of 'struct rb_call_info_kw_arg'
+    return sizeof(struct rb_call_info_kw_arg) + sizeof(VALUE) * (keyword_len - 1);
+                         ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:40:15: error: unknown type name 'rb_snum_t'
+static inline rb_snum_t
+              ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:43:5: error: use of undeclared identifier 'rb_snum_t'
+    rb_snum_t cnt = iseq->body->variable.flip_count;
+    ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:44:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->body->variable.flip_count += 1;
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:45:12: error: use of undeclared identifier 'cnt'
+    return cnt;
+           ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:51:16: error: incomplete definition of type 'struct rb_iseq_struct'
+    return iseq->body->variable.original_iseq;
+           ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:57:21: error: incomplete definition of type 'struct rb_iseq_struct'
+    void *ptr = iseq->body->variable.original_iseq;
+                ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:58:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->body->variable.original_iseq = NULL;
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:67:16: error: incomplete definition of type 'struct rb_iseq_struct'
+    return iseq->body->variable.original_iseq =
+           ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:110:11: error: unknown type name 'rb_compile_option_t'
+    const rb_compile_option_t *option;
+          ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:120:13: error: incomplete definition of type 'struct rb_iseq_struct'
+    if (iseq->flags & ISEQ_USE_COMPILE_DATA) {
+        ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:120:23: error: use of undeclared identifier 'IMEMO_FL_USER2'; did you mean 'RUBY_FL_USER2'?
+    if (iseq->flags & ISEQ_USE_COMPILE_DATA) {
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      RUBY_FL_USER2
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:82:31: note: expanded from macro 'ISEQ_USE_COMPILE_DATA'
+#define ISEQ_USE_COMPILE_DATA IMEMO_FL_USER2
+                              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:856:5: note: 'RUBY_FL_USER2' declared here
+    RUBY_FL_USER_N(2),
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:853:27: note: expanded from macro 'RUBY_FL_USER_N'
+#define RUBY_FL_USER_N(n) RUBY_FL_USER##n = (1<<(RUBY_FL_USHIFT+n))
+                          ^
+<scratch space>:13:1: note: expanded from here
+RUBY_FL_USER2
+^
+In file included from conftest.c:3:
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:121:13: error: incomplete definition of type 'struct rb_iseq_struct'
+        return iseq->aux.compile_data;
+               ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:131:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->aux.compile_data = ZALLOC(struct iseq_compile_data);
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:132:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->flags |= ISEQ_USE_COMPILE_DATA;
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:132:20: error: use of undeclared identifier 'IMEMO_FL_USER2'; did you mean 'RUBY_FL_USER2'?
+    iseq->flags |= ISEQ_USE_COMPILE_DATA;
+                   ^~~~~~~~~~~~~~~~~~~~~
+                   RUBY_FL_USER2
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:82:31: note: expanded from macro 'ISEQ_USE_COMPILE_DATA'
+#define ISEQ_USE_COMPILE_DATA IMEMO_FL_USER2
+                              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:856:5: note: 'RUBY_FL_USER2' declared here
+    RUBY_FL_USER_N(2),
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:853:27: note: expanded from macro 'RUBY_FL_USER_N'
+#define RUBY_FL_USER_N(n) RUBY_FL_USER##n = (1<<(RUBY_FL_USHIFT+n))
+                          ^
+<scratch space>:13:1: note: expanded from here
+RUBY_FL_USER2
+^
+In file included from conftest.c:3:
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:138:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->flags &= ~ISEQ_USE_COMPILE_DATA;
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:138:21: error: use of undeclared identifier 'IMEMO_FL_USER2'; did you mean 'RUBY_FL_USER2'?
+    iseq->flags &= ~ISEQ_USE_COMPILE_DATA;
+                    ^~~~~~~~~~~~~~~~~~~~~
+                    RUBY_FL_USER2
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:82:31: note: expanded from macro 'ISEQ_USE_COMPILE_DATA'
+#define ISEQ_USE_COMPILE_DATA IMEMO_FL_USER2
+                              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:856:5: note: 'RUBY_FL_USER2' declared here
+    RUBY_FL_USER_N(2),
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:853:27: note: expanded from macro 'RUBY_FL_USER_N'
+#define RUBY_FL_USER_N(n) RUBY_FL_USER##n = (1<<(RUBY_FL_USHIFT+n))
+                          ^
+<scratch space>:13:1: note: expanded from here
+RUBY_FL_USER2
+^
+In file included from conftest.c:3:
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:139:9: error: incomplete definition of type 'struct rb_iseq_struct'
+    iseq->aux.compile_data = NULL;
+    ~~~~^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:20:16: note: forward declaration of 'struct rb_iseq_struct'
+typedef struct rb_iseq_struct rb_iseq_t;
+               ^
+/Users/aritra/Desktop/code/aypeai/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.9/lib/debase/ruby_core_source/ruby-2.6.0-p0/iseq.h:145:25: warning: implicit declaration of function 'rb_imemo_new' is invalid in C99 [-Wimplicit-function-declaration]
+    return (rb_iseq_t *)rb_imemo_new(imemo_iseq, 0, 0, 0, 0);
+                        ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <iseq.h>
+/* end */
+
+--------------------
+
