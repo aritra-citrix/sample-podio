@@ -7,6 +7,7 @@ class MainPageController < ApplicationController
       redirect_to url
     end
     @apps = helpers.request_api 'app/'
+    @user = helpers.request_api 'user/status'
   end
 
   def callback
